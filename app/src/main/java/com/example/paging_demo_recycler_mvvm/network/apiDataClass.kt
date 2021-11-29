@@ -11,8 +11,8 @@ data class apiUserData(
     val original_language: String,
     val original_title: String, //1
     val overview: String, //2
-    val popularity: String,
-    val poster_path: String, //4
+    val popularity: String, //4
+    val poster_path: String,
     val release_date: String, //3
 
     /*val email: String,

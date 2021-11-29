@@ -19,7 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginStart="100dp"
-        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/imgPoster"
         app:layout_constraintTop_toTopOf="parent"/>
