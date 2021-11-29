@@ -21,7 +21,7 @@ class apiUserDataSource(): PageKeyedDataSource<Int, apiUserData>() {
 
             override fun onResponse(call: Call<apiDataClass>, response: Response<apiDataClass>) {
                 if (response.isSuccessful) {
-                    callback.onResult(response?.body()?.data!!, params.key+1)
+                    callback.onResult(response?.body()?.results!!, params.key+1)
                 }
             }
         })
@@ -40,7 +40,7 @@ class apiUserDataSource(): PageKeyedDataSource<Int, apiUserData>() {
 
             override fun onResponse(call: Call<apiDataClass>, response: Response<apiDataClass>) {
                 if (response.isSuccessful) {
-                    callback.onResult(response?.body()?.data!!, null, 2)
+                    callback.onResult(response?.body()?.results!!, null, 2)
                 }
             }
         })

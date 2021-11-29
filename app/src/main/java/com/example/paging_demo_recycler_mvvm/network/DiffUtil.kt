@@ -7,10 +7,10 @@ import com.example.paging_demo_recycler_mvvm.network.apiUserData
 //this class extend with diffutil
 class DiffUtil: DiffUtil.ItemCallback<apiUserData>(){
     override fun areItemsTheSame(oldItem: apiUserData, newItem: apiUserData): Boolean {
-        return oldItem.first_name == newItem.first_name
+        return oldItem.original_title == newItem.original_title
     }
 
     override fun areContentsTheSame(oldItem: apiUserData, newItem: apiUserData): Boolean {
-        return oldItem.first_name == newItem.first_name && oldItem.last_name == newItem.last_name
+        return oldItem.original_title == newItem.original_title && oldItem.release_date == newItem.release_date
     }
 }

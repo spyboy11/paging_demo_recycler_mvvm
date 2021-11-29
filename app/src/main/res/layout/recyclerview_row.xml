@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:id="@+id/imageThumb"
+        android:id="@+id/imgPoster"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -14,31 +14,31 @@
         app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
-        android:id="@+id/tvFname"
+        android:id="@+id/tvOriginal_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginStart="100dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/imageThumb"
+        app:layout_constraintStart_toStartOf="@id/imgPoster"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/tvLname"
+        android:id="@+id/tvRelease_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginStart="100dp"
-        app:layout_constraintStart_toStartOf="@id/imageThumb"
-        app:layout_constraintTop_toBottomOf="@id/tvFname"/>
+        app:layout_constraintStart_toStartOf="@id/imgPoster"
+        app:layout_constraintTop_toBottomOf="@id/tvOriginal_Title"/>
 
     <TextView
-        android:id="@+id/tvMail"
+        android:id="@+id/tvOverView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginStart="100dp"
-        app:layout_constraintStart_toStartOf="@id/imageThumb"
-        app:layout_constraintTop_toBottomOf="@+id/tvLname"/>
+        app:layout_constraintStart_toStartOf="@id/imgPoster"
+        app:layout_constraintTop_toBottomOf="@+id/tvRelease_date"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

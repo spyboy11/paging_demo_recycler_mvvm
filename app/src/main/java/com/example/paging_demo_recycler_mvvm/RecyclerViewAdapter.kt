@@ -15,21 +15,21 @@ class RecyclerViewAdapter: PagedListAdapter<apiUserData, RecyclerViewAdapter.Vie
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
 
-        val tvFname: TextView = view.findViewById(R.id.tvFname)
-        val tvLname: TextView = view.findViewById(R.id.tvLname)
-        val tvMail: TextView = view.findViewById(R.id.tvMail)
-        val tvImg: ImageView = view.findViewById(R.id.imageThumb)
+        val tvOriginalTitle: TextView = view.findViewById(R.id.tvOriginal_Title)
+        val tvReleaseDate: TextView = view.findViewById(R.id.tvRelease_date)
+        val tvOverview: TextView = view.findViewById(R.id.tvOverView)
+        val tvImgPoster: ImageView = view.findViewById(R.id.imgPoster)
 
         fun bind(data: apiUserData){
-            tvFname.text = data.first_name
-            tvLname.text = data.last_name
-            tvMail.text = data.email
-            val url = data.avatar
+            tvOriginalTitle.text = data.original_title
+            tvReleaseDate.text = data.release_date
+            tvOverview.text = data.overview
+            val url = data.poster_path
 
-            Glide.with(tvImg)
+            Glide.with(tvImgPoster)
                 .load(url)
                 .circleCrop()
-                .into(tvImg)
+                .into(tvImgPoster)
         }
     }
 
