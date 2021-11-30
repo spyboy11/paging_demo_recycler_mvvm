@@ -18,12 +18,18 @@ class RecyclerViewAdapter: PagedListAdapter<apiUserData, RecyclerViewAdapter.Vie
         val tvOriginalTitle: TextView = view.findViewById(R.id.tvOriginal_Title)
         val tvReleaseDate: TextView = view.findViewById(R.id.tvRelease_date)
         val tvPopularity: TextView = view.findViewById(R.id.tv_popularity)
+        val tvId: TextView = view.findViewById(R.id.tvID)
         val tvImgPoster: ImageView = view.findViewById(R.id.imgPoster)
+
+        /*val tvImgPoster: ImageView = view.findViewById(R.id.imgPoster)
+        val tvImgPoster: ImageView = view.findViewById(R.id.imgPoster)
+        val tvImgPoster: ImageView = view.findViewById(R.id.imgPoster)*/
 
         fun bind(data: apiUserData){
             tvOriginalTitle.text = data.original_title
             tvReleaseDate.text = data.release_date
             tvPopularity.text = data.popularity
+            tvId.text = data.id.toString()
             val url = data.backdrop_path
 
             Glide.with(tvImgPoster)

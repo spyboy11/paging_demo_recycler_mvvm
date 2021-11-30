@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -17,20 +18,21 @@
         android:id="@+id/tvOriginal_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="100dp"
+        android:hint="tvOriginal_Title"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/imgPoster"
-        app:layout_constraintTop_toTopOf="parent"/>
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="10dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvRelease_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="100dp"
-        app:layout_constraintStart_toStartOf="@id/imgPoster"
-        app:layout_constraintTop_toBottomOf="@id/tvOriginal_Title"/>
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="@id/tvOriginal_Title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="tvRelease_date"/>
 
     <TextView
         android:id="@+id/tv_popularity"
@@ -39,5 +41,17 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="100dp"
         app:layout_constraintStart_toStartOf="@id/imgPoster"
-        app:layout_constraintTop_toBottomOf="@+id/tvRelease_date"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvRelease_date"
+        android:hint="tv_popularity"/>
+
+    <TextView
+        android:id="@+id/tvID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="108dp"
+        android:hint="tvID"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_popularity"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
