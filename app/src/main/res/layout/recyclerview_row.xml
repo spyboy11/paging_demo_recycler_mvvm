@@ -12,46 +12,57 @@
         android:layout_margin="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@mipmap/ic_launcher"/>
 
     <TextView
         android:id="@+id/tvOriginal_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:hint="tvOriginal_Title"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="10dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toEndOf="@+id/imgPoster"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="10dp" />
 
     <TextView
         android:id="@+id/tvRelease_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
+        android:hint="tvRelease_date"
         app:layout_constraintStart_toStartOf="@id/tvOriginal_Title"
-        app:layout_constraintTop_toTopOf="parent"
-        android:hint="tvRelease_date"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvOriginal_Title" />
 
     <TextView
         android:id="@+id/tv_popularity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="100dp"
-        app:layout_constraintStart_toStartOf="@id/imgPoster"
-        app:layout_constraintTop_toBottomOf="@+id/tvRelease_date"
-        android:hint="tv_popularity"/>
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="40dp"
+        android:hint="tv_popularity"
+        app:layout_constraintStart_toStartOf="@id/tvOriginal_Title"
+        app:layout_constraintTop_toBottomOf="@+id/tvOriginal_Title" />
 
     <TextView
-        android:id="@+id/tvID"
+        android:id="@+id/tvOriginalLang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="108dp"
-        android:hint="tvID"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/tv_popularity"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="60dp"
+        android:hint="original_language"
+        app:layout_constraintStart_toStartOf="@id/tvOriginal_Title"
+        app:layout_constraintTop_toBottomOf="@+id/tvOriginal_Title" />
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="80dp"
+        android:hint="tvId"
+        app:layout_constraintStart_toStartOf="@id/tvOriginal_Title"
+        app:layout_constraintTop_toBottomOf="@+id/tvOriginal_Title" />
 </androidx.constraintlayout.widget.ConstraintLayout>
