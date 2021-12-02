@@ -1,5 +1,6 @@
 package com.example.paging_demo_recycler_mvvm
 
+import android.util.Log
 import androidx.paging.PageKeyedDataSource
 import com.example.paging_demo_recycler_mvvm.network.RetroInstance
 import com.example.paging_demo_recycler_mvvm.network.RetroService_interface
@@ -16,7 +17,7 @@ class apiUserDataSource(): PageKeyedDataSource<Int, apiUserData>() {
         val call = retroInstance.getDataFromApi(params.key)
         call.enqueue(object: Callback<apiDataClass>{
             override fun onFailure(call: Call<apiDataClass>, t: Throwable) {
-                TODO("Not yet implemented")
+                Log.e("apiUserDataSource", "Load After Failed")
             }
 
             override fun onResponse(call: Call<apiDataClass>, response: Response<apiDataClass>) {
@@ -35,7 +36,7 @@ class apiUserDataSource(): PageKeyedDataSource<Int, apiUserData>() {
         val call = retroInstance.getDataFromApi(1)
         call.enqueue(object: Callback<apiDataClass>{
             override fun onFailure(call: Call<apiDataClass>, t: Throwable) {
-                TODO("Not yet implemented")
+                Log.e("apiUserDataSource", "Load After Failed")
             }
 
             override fun onResponse(call: Call<apiDataClass>, response: Response<apiDataClass>) {

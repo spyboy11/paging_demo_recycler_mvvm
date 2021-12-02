@@ -36,7 +36,7 @@ class RecyclerViewAdapter: PagedListAdapter<apiUserData, RecyclerViewAdapter.Vie
             val url = data.backdrop_path
 
             Glide.with(tvImgPoster)
-                .load(url)
+                .load("https://image.tmdb.org/t/p/w185" + url)
                 .circleCrop()
                 .into(tvImgPoster)
         }
